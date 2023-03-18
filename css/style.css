@@ -6,37 +6,41 @@
 
 /* UTILITI */
 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
-.align-center{
+.align-center {
     align-items: center;
 }
 
-.m-left{
+.m-left {
     margin-left: 10px;
 }
 
-.s-beetween{
+.s-beetween {
     justify-content: space-between;
 }
 
-.grey{
+.grey {
     color: rgb(128, 133, 140);
 }
 
-.f-end{
+.f-end {
     justify-content: flex-end;
 }
-.j-center{
+
+.j-center {
     justify-content: center;
 }
 
-.w-small{
+.w-small {
     width: 40%;
 }
 
+.s-around {
+    justify-content: space-around;
+}
 
 
 
@@ -44,44 +48,47 @@
 
 .container {
     border: 1px solid black;
-    width: 1170px;
+    width: 1200px;
     margin: auto;
     margin-top: 30px;
+    display: flex;
+
 }
 
-.contentLeft{
-    border: 1px solid black;
+.contentLeft {
     padding: 10px;
     display: flex;
     align-items: center;
-    width: 40%;
     justify-content: space-between;
+    width: 500px;
+
 
 }
+
 .logo {
     height: 60px;
     border-radius: 40px;
     margin-left: 5px;
 }
+
 .item i {
     margin: 0px 10px;
-   color: rgb(173, 173, 173);
-   font-size: 25px;
+    color: rgb(173, 173, 173);
+    font-size: 25px;
 }
 
-.allert{
-    width: 40%;
-    border: 1px solid black;
-    background-color: rgb(142, 218, 252) ;
+.allert {
+
+    background-color: rgb(142, 218, 252);
     padding: 10px;
     display: flex;
     align-items: center;
-    
-   
+
+
 }
 
-.bell{
-    
+.bell {
+
     height: 50px;
     width: 50px;
     border-radius: 30px;
@@ -89,7 +96,8 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    
+
+
 }
 
 .bell i {
@@ -97,20 +105,20 @@
     color: rgb(142, 218, 252);
 }
 
-.text{
+.text {
     margin-left: 10px;
 }
 
 .text a {
-    color:rgb(87, 129, 149);
+    color: rgb(87, 129, 149);
 }
 
-.input{
-    width: 40%;
+.input {
     padding: 10px;
-    background-color: rgb(250, 250, 250) ;
+    background-color: rgb(250, 250, 250);
 }
-.input button{
+
+.input button {
     padding: 10px;
     width: 60px;
     border: none;
@@ -118,28 +126,105 @@
     color: rgb(175, 183, 192);
 }
 
-.input input{
+.input input {
     padding: 10px;
-    width: 86%;
+    width: 78%;
     border: none;
 }
 
-.contact{
-    width: 40%;
+.contact {
     padding: 10px;
     display: flex;
     align-items: center;
+
 }
 
-.contact:hover{
-    background-color:rgb(233, 235, 235);
+.contact:hover {
+    background-color: rgb(233, 235, 235);
 }
 
-.textContact p{
+.textContact p {
     color: rgb(193, 192, 197);
 }
 
 .time p {
     color: rgb(193, 192, 197);
 
+}
+
+.containerRight {
+    width: 60%;
+}
+
+.contentRight {
+
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.contentMid {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    background-image: url(../img/mine.jpg);
+}
+
+
+
+.messageRight {
+    width: 200px;
+    background-color: rgb(213, 249, 186);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+}
+
+.messageRight2 {
+    width: 250px;
+    background-color: rgb(213, 249, 186);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 85px;
+    right: 40px;
+
+}
+
+.messageRight3 {
+    width: 250px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 25%;
+    left: 40px;
+
+}
+
+.bar {
+    height: 87px;
+    background-color: rgb(243, 238, 234);
+}
+
+.bar i {
+    color: rgb(107, 109, 108);
+    font-size: 30px;
+}
+
+.textBar {
+    width: 100%;
+    padding: 0px 10px;
+
+}
+
+.textBar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
 }
