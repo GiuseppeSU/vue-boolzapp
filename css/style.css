@@ -45,13 +45,8 @@
 .container {
     border: 1px solid black;
     width: 1170px;
-    height: 800px;
     margin: auto;
     margin-top: 30px;
-}
-
-.containerLeft {
-   
 }
 
 .contentLeft{
@@ -127,4 +122,24 @@
     padding: 10px;
     width: 86%;
     border: none;
+}
+
+.contact{
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact:hover{
+    background-color:rgb(233, 235, 235);
+}
+
+.textContact p{
+    color: rgb(193, 192, 197);
+}
+
+.time p {
+    color: rgb(193, 192, 197);
+
 }
