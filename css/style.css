@@ -165,8 +165,6 @@
 }
 
 .contentRight {
-
-    display: flex;
     padding: 10px;
     width: 100%;
 }
@@ -174,11 +172,19 @@
 .contentMid {
     width: 100%;
     height: 80%;
-    position: relative;
     background-image: url(../img/mine.jpg);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+    
+   
 }
 
-
+.mex{
+    width: 100%;
+}
 
 .messageRight {
     width: 200px;
@@ -186,31 +192,18 @@
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-
+    float: right;
 }
 
-.messageRight2 {
-    width: 250px;
-    background-color: rgb(213, 249, 186);
-    padding: 10px;
-    border-radius: 10px;
-    position: absolute;
-    top: 85px;
-    right: 40px;
 
-}
 
-.messageRight3 {
+.messageLeft {
     width: 250px;
     background-color: white;
     padding: 10px;
     border-radius: 10px;
-    position: absolute;
-    top: 25%;
-    left: 40px;
+    float: left;
+  
 
 }
 
