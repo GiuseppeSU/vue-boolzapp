@@ -59,7 +59,7 @@
 
                         <div class="contact d-flex s-beetween" v-for="(contact , index) in contacts" @click="utenteAttivo = index">
                             <div class="d-flex align-center">
-                                <img class="logo" :src="contact.avatar" alt="Avatar Michele">
+                                <img class="logo" :src="contact.avatar" alt="Avatar ">
                                 <div class="textContact">
                                     <h2 class="m-left">{{contact.name}}</h2>
                                     <p class="m-left">{{contact.messages[contact.messages.length-1].message}}</p>
@@ -112,7 +112,7 @@
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="textBar">
-                                <input type="text" placeholder="Scrivi un messaggio">
+                                <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage()">
                             </div>
 
                             <div class="item">
