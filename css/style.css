@@ -51,7 +51,7 @@
 }
 
 .container {
-    border: 1px solid black;
+   
     width: 1200px;
     margin: auto;
     display: flex;
@@ -60,6 +60,10 @@
     top: 25px;
     left: calc(50% - 600px);
 
+}
+
+.containerLeft {
+    height: 850px;
 }
 
 .contentLeft {
