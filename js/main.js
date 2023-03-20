@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       newMessage: '',
-      utenteAttivo : 0,
+      utenteAttivo: 0,
       contacts: [
         {
           name: 'Michele',
@@ -171,19 +171,40 @@ createApp({
 
     }
   },
-  methods:{
-    addMessage(){
+  methods: {
+    addMessage() {
       const newMessage = {
         status: 'sent',
         message: this.newMessage,
         date: Date.now().toLocaleString()
-        
+
+
       };
       this.contacts[this.utenteAttivo].messages.push(newMessage)
-      this.newMessage ='';
+      this.newMessage = '';
+      setTimeout(() => {
+        this.okMessage()
+      }, 1000)
+    },
+
+    okMessage() {
+      const okMessage = {
+        status: 'received',
+        message: 'ok',
+        date: Date.now().toLocaleString()
+
+      }
+      this.contacts[this.utenteAttivo].messages.push(okMessage)
+
     }
 
-  }
+
+
+
+
+
 
   }
+
+}
 ).mount('#app')
