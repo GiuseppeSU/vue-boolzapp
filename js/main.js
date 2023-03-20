@@ -4,6 +4,8 @@ createApp({
   data() {
     return {
       newMessage: '',
+      filterKey: '',
+      filteredContacts: [],
       utenteAttivo: 0,
       contacts: [
         {
@@ -177,8 +179,6 @@ createApp({
         status: 'sent',
         message: this.newMessage,
         date: Date.now().toLocaleString()
-
-
       };
       this.contacts[this.utenteAttivo].messages.push(newMessage)
       this.newMessage = '';
@@ -196,15 +196,17 @@ createApp({
       }
       this.contacts[this.utenteAttivo].messages.push(okMessage)
 
+    },
+
+    searchUser() {
+      this.filteredContacts = this.contacts.filter(  (contact)=> {
+      return contact.name.toLowerCase().includes(this.filterKey.toLowerCase())
+    });
     }
-
-
-
-
-
-
-
+  },
+  mounted() {
+    this.filteredContacts = this.contacts
   }
-
 }
+
 ).mount('#app')
