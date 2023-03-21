@@ -204,6 +204,10 @@ createApp({
       this.filteredContacts = this.contacts.filter((contact) => {
         return contact.name.toLowerCase().includes(this.filterKey.toLowerCase())
       });
+    },
+    deleteMessage(){
+      
+
     }
   },
   mounted() {
