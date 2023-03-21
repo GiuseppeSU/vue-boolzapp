@@ -205,9 +205,8 @@ createApp({
         return contact.name.toLowerCase().includes(this.filterKey.toLowerCase())
       });
     },
-    deleteMessage(){
-      
-
+    deleteMessage(index){
+      this.filteredContacts[this.utenteAttivo].messages.splice(index , 1)
     }
   },
   mounted() {
