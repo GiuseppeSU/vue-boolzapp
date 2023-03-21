@@ -209,11 +209,17 @@ createApp({
       this.filteredContacts[this.utenteAttivo].messages.splice(index , 1)
     },
     searchMessage(){
-      const messaggi = this.filteredContacts[this.utenteAttivo].messages.filter((message)=>{
+      let messaggi = this.filteredContacts[this.utenteAttivo].messages.filter((message)=>{
         return message.status == 'received'
         
       })
-      return 'Ultimo accesso ' + messaggi[messaggi.length-1].date ;
+      if(messaggi.length == 0){
+        return 'Ultimo accesso ' + DateTime.now().toFormat('hh:mm')
+      }else{
+        return 'Ultimo accesso ' + messaggi[messaggi.length-1].date
+
+      }
+      
     }
   },
   mounted() {
