@@ -197,6 +197,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
     float: right;
+    margin: 15px 0px;
 }
 
 
@@ -242,4 +243,11 @@
 .color{
     background-color: rgb(216, 219, 212);
 
+}
+
+.date{
+    font-size: 11px;
+    color: rgb(210, 216, 224);
+    text-align: right;
+    padding:5px;
 }

@@ -73,12 +73,12 @@
                     </div>
                     <!-- FINE COLONNA DI SINISTRA -->
 
-                    <div class="containerRight">
+                    <div class="containerRight" v-if="filteredContacts[utenteAttivo]">
                         <div class="contentRight d-flex  s-beetween">
                             <div class="d-flex align-center">
-                                <img class="logo" :src="contacts[utenteAttivo].avatar" alt="Michele">
+                                <img class="logo" :src="filteredContacts[utenteAttivo].avatar" alt="Michele">
                                 <div>
-                                    <h2 class="m-left">{{contacts[utenteAttivo].name}}</h2>
+                                    <h2 class="m-left">{{filteredContacts[utenteAttivo].name}}</h2>
                                     <p class="grey m-left">Ultimo accesso oggi alle 12:00</p>
 
                                 </div>
@@ -93,15 +93,12 @@
                         </div>
 
                         <div class="contentMid">
-                            <div class="mex"v-for="message in contacts[utenteAttivo].messages">
+                            <div class="mex"v-for="message in filteredContacts[utenteAttivo].messages">
 
                                 <div :class="message.status =='sent' ? 'messageRight' : 'messageLeft'">
                                     <p>{{message.message}}</p>
+                                    <div class="date">{{message.date}}</div>
                                 </div>
-
-                                <!-- <div class="messageLeft">
-                                    <P>Certo tutto fatto!</P>
-                                </div> -->
                             </div>
 
 
@@ -145,7 +142,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>
