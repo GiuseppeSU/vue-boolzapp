@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                             <div class="time">
-                                <p>12:00</p>
+                                <p>{{contact.messages[contact.messages.length-1].date}}</p>
                             </div>
                         </div>
                         <!-- CONTATTI -->
@@ -95,7 +95,8 @@
                         </div>
 
                         <div class="contentMid">
-                            <div class="mex" v-for="(message,index) in filteredContacts[utenteAttivo].messages">
+                            <div class="mex" v-for="(message,index) in filteredContacts[utenteAttivo].messages" :key="message.message">
+
 
                                 <div :class="message.status =='sent' ? 'messageRight' : 'messageLeft'">
                                     <p>{{message.message}}</p>
