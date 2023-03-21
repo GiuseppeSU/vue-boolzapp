@@ -207,6 +207,13 @@ createApp({
     },
     deleteMessage(index){
       this.filteredContacts[this.utenteAttivo].messages.splice(index , 1)
+    },
+    searchMessage(){
+      const messaggi = this.filteredContacts[this.utenteAttivo].messages.filter((message)=>{
+        return message.status == 'received'
+        
+      })
+      return 'Ultimo accesso ' + messaggi[messaggi.length-1].date ;
     }
   },
   mounted() {
